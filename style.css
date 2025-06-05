@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f3efe7;
+  color: #333;
+}
+
+.topo {
+  position: relative;
+  background-image: url('trator.jpg'); /* Altere para o nome correto da imagem do trator */
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  max-width: 60%;
+}
+
+.topo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.topo p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.icones {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.icon {
+  width: 24px;
+  margin-left: 10px;
+  filter: invert(1);
+}
+
+.conteudo {
+  padding: 20px;
+}
+
+.texto-imagem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.texto {
+  flex: 2;
+  font-size: 16px;
+}
+
+.imagem-direita {
+  flex: 1;
+  width: 180px;
+  border-radius: 8px;
+}
+
+.barra-verde {
+  background-color: #6bb34e;
+  height: 50px;
+  margin: 30px 0;
+  border-radius: 10px;
+}
+
+.texto-central {
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 30px;
+}
+
+.rodape {
+  background-color: #6bb34e;
+  color: white;
+  text-align: right;
+  padding: 10px 20px;
+  font-size: 14px;
+}
