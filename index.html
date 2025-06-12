@@ -42,6 +42,19 @@
     <p>Desenvolvido por Isabela</p>
   </footer>
   
+  <script>
+  const carousel = document.querySelector('.carousel');
+  const btnAnterior = document.querySelector('.btn-anterior');
+  const btnProximo = document.querySelector('.btn-proximo');
+
+  btnAnterior.addEventListener('click', () => {
+    carousel.scrollBy({ left: -200, behavior: 'smooth' });
+  });
+
+  btnProximo.addEventListener('click', () => {
+    carousel.scrollBy({ left: 200, behavior: 'smooth' });
+  });
+</script>
 
 </body>
 </html>
