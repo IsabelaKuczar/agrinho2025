@@ -5,57 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agro Notícias</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Botão de contraste */
+    #botao-contraste {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 10px;
+      background: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .contraste {
+      background-color: #000 !important;
+      color: #fff !important;
+    }
+
+    .contraste img {
+      filter: brightness(0.8) contrast(1.2);
+    }
+  </style>
 </head>
 <body>
 
-  <header class="topo">
+  <button id="botao-contraste" aria-label="Ativar modo alto contraste">Alto Contraste</button>
+
+  <header class="topo" role="banner">
     <div class="overlay">
       <h1>Agro Notícias</h1>
-      <p>levando culturas do agronegócios do campo à cidade</p>
+      <p>Levando culturas do agronegócio do campo à cidade</p>
     </div>
     <div class="icones">
-      <img src="WhatsApp Image 2025-06-12 at 16.38.32.jpeg" alt="Usuário" class="icon">
-      <img src="WhatsApp Image 2025-06-12 at 16.38.50.jpeg" alt="Buscar" class="icon">
+      <img src="WhatsApp Image 2025-06-12 at 16.38.32.jpeg" alt="Ícone de usuário" class="icon">
+      <img src="WhatsApp Image 2025-06-12 at 16.38.50.jpeg" alt="Ícone de busca" class="icon">
     </div>
   </header>
 
-  <main class="conteudo">
-    <section class="texto-imagem">
+  <main class="conteudo" role="main">
+    <section class="texto-imagem" aria-labelledby="titulo-agro">
       <div class="texto">
+        <h2 id="titulo-agro">Importância do Agronegócio</h2>
         <p>
-          O agronegócio exerce um papel fundamental no desenvolvimento de uma cidade, pois integra toda a cadeia produtiva, desde a produção de insumos e o cultivos até a industrialização e comercialização de alimentos.
+          O agronegócio exerce um papel fundamental no desenvolvimento de uma cidade, pois integra toda a cadeia produtiva, desde a produção de insumos e o cultivo até a industrialização e comercialização de alimentos.
         </p>
       </div>
-      <img src="WhatsApp Image 2025-06-12 at 16.46.03.jpeg" alt="Agricultor cuidando das plantas" class="imagem-direita">
-      <figcaption> Fonte: Foto autoral</figcaption>
+      <figure>
+        <img src="WhatsApp Image 2025-06-12 at 16.46.03.jpeg" alt="Agricultor cuidando das plantas" class="imagem-direita">
+        <figcaption>Fonte: Foto autoral</figcaption>
+      </figure>
     </section>
 
-    <div class="barra-verde"></div>
+    <div class="barra-verde" aria-hidden="true"></div>
 
     <section class="texto-central">
+      <h2>Transformação Social</h2>
       <p>
-        O agronegócio transforma as vidas das pessoas ao gerar emprego e renda, tanto no campo quanto em atividades a transportes, comércio e serviços, o que fortalece a economia local.
+        O agronegócio transforma as vidas das pessoas ao gerar emprego e renda, tanto no campo quanto em atividades relacionadas a transporte, comércio e serviços, o que fortalece a economia local.
       </p>
     </section>
   </main>
 
-  <footer class="rodape">
+  <footer class="rodape" role="contentinfo">
     <p>Desenvolvido por Isabela</p>
   </footer>
-  
+
   <script>
-  const carousel = document.querySelector('.carousel');
-  const btnAnterior = document.querySelector('.btn-anterior');
-  const btnProximo = document.querySelector('.btn-proximo');
+    // Modo alto contraste
+    const botaoContraste = document.getElementById('botao-contraste');
+    botaoContraste.addEventListener('click', () => {
+      document.body.classList.toggle('contraste');
+    });
 
-  btnAnterior.addEventListener('click', () => {
-    carousel.scrollBy({ left: -200, behavior: 'smooth' });
-  });
+    // Carrossel (se existir no futuro)
+    const carousel = document.querySelector('.carousel');
+    const btnAnterior = document.querySelector('.btn-anterior');
+    const btnProximo = document.querySelector('.btn-proximo');
 
-  btnProximo.addEventListener('click', () => {
-    carousel.scrollBy({ left: 200, behavior: 'smooth' });
-  });
-</script>
+    if (carousel && btnAnterior && btnProximo) {
+      btnAnterior.addEventListener('click', () => {
+        carousel.scrollBy({ left: -200, behavior: 'smooth' });
+      });
+
+      btnProximo.addEventListener('click', () => {
+        carousel.scrollBy({ left: 200, behavior: 'smooth' });
+      });
+    }
+  </script>
 
 </body>
 </html>
