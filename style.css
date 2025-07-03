@@ -5,23 +5,24 @@ body {
   color: #333;
 }
 
-.topo {
-  position: relative;
-  background-image: url('trator.jpg'); /* Altere para o nome correto da imagem do trator */
+header.topo {
+  background-image: url('1B95354B-1206-407F-866A-5488ECE976E2.jpg');
   background-size: cover;
   background-position: center;
-  height: 250px;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
+  height: 400px;
+  color: white;
+  position: relative;
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 10px;
-  max-width: 60%;
+header.topo .overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* escurece o fundo pra melhorar o texto */
+  padding: 50px 20px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .topo h1 {
